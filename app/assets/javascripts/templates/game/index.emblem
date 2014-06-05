@@ -1,0 +1,3 @@
+| Game index
+for game in games
+  = game.name

@@ -1,0 +1,9 @@
+div Create new game
+div
+  label for='game__name' Name:
+  Ember.TextField value=name placeholder='name' size='50' type='text' id='game__name'
+div
+  label for='game_seconds_remaining' Duration:
+  Ember.TextField id='game_seconds_remaining' type='text' value=seconds_remaining placeholder='duration(in seconds)' size='20'
+div
+  button{{action 'createGame'}} Create

@@ -1,2 +1,5 @@
 | Ember Index!
-= email
+= model.firstObject.email
+
+div
+  render "game/new"
