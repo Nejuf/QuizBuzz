@@ -24,6 +24,8 @@ gem 'jquery-rails'
 gem 'jquery-turbolinks'
 gem 'slim-rails'
 
+gem 'devise', '~> 3.2.4'
+
 gem 'bson_ext', '~> 1.10.1'
 gem 'mongoid', '~> 3.1.6'
 gem 'mongoid_rails_migrations', '~> 1.0.1'
