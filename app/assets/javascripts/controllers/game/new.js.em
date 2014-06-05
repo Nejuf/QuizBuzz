@@ -8,7 +8,7 @@ class QuizBuzz.GameNewController extends Ember.ObjectController
     createGame: ()->
       if @name? && !isNaN(@seconds_remaining)
         @model.seconds_remaining = parseInt(@model.seconds_remaining)
-        @model.save().then ()->
+        @model.save().then ()=>
           @model = @store.createRecord('game')
 
       false
