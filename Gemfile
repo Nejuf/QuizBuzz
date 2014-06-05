@@ -12,6 +12,7 @@ gem 'sqlite3'
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
+  gem 'ember_script-rails', '~> 0.0.4'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby
@@ -20,11 +21,17 @@ group :assets do
 end
 
 gem 'jquery-rails'
+gem 'jquery-turbolinks'
 gem 'slim-rails'
 
 gem 'bson_ext', '~> 1.10.1'
 gem 'mongoid', '~> 3.1.6'
 gem 'mongoid_rails_migrations', '~> 1.0.1'
+
+gem 'ember-rails', '~> 0.15.0'
+gem 'ember-source', '~> 1.5.1.1'
+gem 'emblem-rails', '~> 0.2.1'
+gem 'emblem-source', '~> 0.3.15'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
@@ -39,18 +46,19 @@ gem 'mongoid_rails_migrations', '~> 1.0.1'
 # gem 'capistrano'
 
 group :development, :test do
-	gem 'bullet'
-	gem 'rspec-rails'
-	gem 'mongoid-rspec'
-	gem 'debugger'
-	gem 'pry'
+  gem 'awesome_print'
+  gem 'bullet'
+  gem 'debugger'
+  gem 'mongoid-rspec'
+  gem 'pry'
   gem 'pry-debugger'
   gem 'pry-rescue'
   gem 'pry-stack_explorer'
+  gem 'rspec-rails'
 end
 
 group :development do
-	gem 'better_errors'
+  gem 'better_errors'
   gem 'binding_of_caller'
   gem 'meta_request'
   gem 'rails-footnotes'
