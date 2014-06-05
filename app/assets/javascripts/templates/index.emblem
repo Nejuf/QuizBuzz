@@ -3,3 +3,5 @@
 
 div
   render "game/new"
+div
+  render "games/index" games
