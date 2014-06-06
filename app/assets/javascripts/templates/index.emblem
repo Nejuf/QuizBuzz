@@ -1,7 +1,4 @@
-| Ember Index!
-= model.firstObject.email
-
-div
+.center
   render "game/new"
-div
+.center
   render "games/index" games

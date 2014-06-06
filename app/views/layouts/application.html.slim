@@ -9,16 +9,23 @@ html
   body
     header.ym-wrapper
       .ym-wbox
-        p.navbar-text.pull-right
-          -if user_signed_in?
-            | Logged in as #{current_user.email}
-            =link_to 'Edit Profile', edit_user_registration_path, class: 'navbar-link'
-            '  |
-            =link_to 'Logout', destroy_user_session_path, method: :delete, class: 'navbar-link'
-          -else
-            =link_to 'Sign Up', new_user_registration_path, class: 'navbar-link'
-            '  |
-            =link_to 'Login', new_user_session_path, class: 'navbar-link'
+        nav.navbar.ym-hlist
+          ul
+            li class="active"
+              strong Active
+            li
+              a href="#"Link
+          .navbar-user
+            -if user_signed_in?
+              span.logged-in-text
+                | Logged in as #{current_user.email}
+              =link_to 'Edit Profile', edit_user_registration_path, class: 'navbar-link'
+              '  |
+              =link_to 'Logout', destroy_user_session_path, method: :delete, class: 'navbar-link'
+            -else
+              =link_to 'Sign Up', new_user_registration_path, class: 'navbar-link'
+              '  |
+              =link_to 'Login', new_user_session_path, class: 'navbar-link'
 
     section.ym-wrapper
       .ym-wbox
@@ -30,4 +37,4 @@ html
 
     footer.ym-wrapper
       .ym-wbox
-        | ©2014 Nejuf
+        .site-footer.center ©2014 Nejuf

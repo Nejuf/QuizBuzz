@@ -1,6 +1,6 @@
 | Existing Games:
-ul
+div
   each game in content
     unless game.isNew
-      li
+      div
         link-to game.name 'game' game
