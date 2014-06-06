@@ -61,6 +61,13 @@ body:after {
   position: relative;
 }
 
+.site-header {
+  min-height: 50px;
+}
+.site-main {
+  min-height: 500px; //Dumbly push the footer down
+}
+
 h1,
 h2,
 h3,
@@ -68,4 +75,20 @@ h4,
 h5,
 h6 {
   color: $text-color;
+  font-family: Georgia, Serif;
+}
+
+.sign-in,
+.sign-up {
+  max-width: 500px;
+
+  .submit {
+    float: inherit;
+  }
+  .remember-me-checkbox {
+    margin-top: 10px;
+  }
+  .password-confirmation-input {
+    margin-top: 12px;
+  }
 }
