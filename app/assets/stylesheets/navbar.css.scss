@@ -1,0 +1,19 @@
+$nav-blue: #E1E1F7;
+
+.navbar {
+  background-color: $nav-blue;
+  padding-right: 1em;
+}
+.navbar-user {
+  float: right;
+  line-height: 3em; //To match YAML hlist
+}
+
+.site-footer {
+  background-color: $nav-blue;
+  padding: 0.8em;
+}
+
+.logged-in-text {
+  padding-right: 1em;
+}

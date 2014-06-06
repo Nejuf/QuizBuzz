@@ -1,0 +1,6 @@
+| Game Show
+div=name
+div
+  | #{seconds_remaining} Seconds Remaining
+
+button{{action 'startGame'}} Start
