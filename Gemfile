@@ -22,6 +22,8 @@ end
 
 gem 'active_model_serializers', '~> 0.8.1'
 
+gem 'bourbon', '~> 4.0.2'
+
 gem 'jquery-rails'
 gem 'jquery-turbolinks'
 gem 'slim-rails'

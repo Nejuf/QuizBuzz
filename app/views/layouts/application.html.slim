@@ -7,7 +7,7 @@ html
     = javascript_include_tag "application"
     = csrf_meta_tags
   body
-    header.ym-wrapper
+    header.site-header.ym-wrapper
       .ym-wbox
         nav.navbar.ym-hlist
           ul
@@ -27,7 +27,7 @@ html
               '  |
               =link_to 'Login', new_user_session_path, class: 'navbar-link'
 
-    section.ym-wrapper
+    section.site-main.ym-wrapper
       .ym-wbox
         / Devise Flash Messages
         p.notice= notice
