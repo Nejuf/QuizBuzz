@@ -78,9 +78,14 @@ h6 {
   font-family: Georgia, Serif;
 }
 
+$center-form-width: 500px;
+.center-form {
+  max-width: $center-form-width;
+}
+
 .sign-in,
 .sign-up {
-  max-width: 500px;
+  @extend .center-form;
 
   .submit {
     float: inherit;

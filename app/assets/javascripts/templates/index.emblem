@@ -1,5 +1,5 @@
 
-.center
+.center.center-form
   render "game/new"
 .center
   render "games/index" games

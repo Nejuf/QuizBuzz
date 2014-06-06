@@ -1,3 +1,4 @@
-a.ym-button.ym-xsmall href='/#/' Back
-div
-  == outlet
+.center.center-form
+  a.ym-button.ym-xsmall href='/#/' Back
+  div
+    == outlet
