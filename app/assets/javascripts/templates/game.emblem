@@ -1,2 +1,3 @@
-| Game Route
-== outlet
+a.ym-button.ym-xsmall href='/#/' Back
+div
+  == outlet

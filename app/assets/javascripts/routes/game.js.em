@@ -1,8 +1,7 @@
 class QuizBuzz.GameRoute extends Ember.Route
   model: (params)->
-    debugger
     @store.find('game', params.game_id)
 
   setupController: (controller, model)->
-    window.test = controller
+    console.log('setupController', model.id)
     controller.set('content', model)

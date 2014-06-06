@@ -1,3 +1,4 @@
+
 .center
   render "game/new"
 .center
