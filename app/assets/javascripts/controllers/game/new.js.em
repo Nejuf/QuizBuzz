@@ -1,5 +1,7 @@
 class QuizBuzz.GameNewController extends Ember.ObjectController
 
+  showGameForm: false
+
   init: ()->
     @_super()
     @model = @store.createRecord('game')
@@ -8,7 +10,13 @@ class QuizBuzz.GameNewController extends Ember.ObjectController
     createGame: ()->
       if @name? && !isNaN(@seconds_remaining)
         @model.seconds_remaining = parseInt(@model.seconds_remaining)
-        @model.save().then ()=>
+        @model.save().then (game)=>
           @model = @store.createRecord('game')
+          @showGameForm = false
+          @transitionToRoute('game', game)
 
+      false
+
+    openNewGameForm: ()->
+      @showGameForm = true
       false

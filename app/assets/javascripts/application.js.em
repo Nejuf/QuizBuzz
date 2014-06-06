@@ -25,11 +25,9 @@ window.QuizBuzz = Ember.Application.create(
 # Basic animation for all of the views
 Ember.View.reopen
   willAnimateIn: ()->
-    console.log('animate')
     this.$().css("opacity", 0)
 
   animateIn: ()->
-    console.log('animate in')
     this.$().fadeTo(500, 1)
 
   # Overriding the animateOut without doing view cleanup will result in old views sticking around

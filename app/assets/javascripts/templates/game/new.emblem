@@ -1,12 +1,14 @@
-div Create new game
-.ym-form.ym-columnar
-  .ym-fbox
-    label
-      | Name:
-    Ember.TextField value=name placeholder='name'
-  .ym-fbox
-    label
-      | Duration:
-    Ember.TextField type='number' value=seconds_remaining placeholder='duration(in seconds)'
-  .ym-fbox-footer
-    button{{action 'createGame'}} class="ym-button ym-primary" Create
+if showGameForm
+  .ym-form.ym-columnar
+    .ym-fbox
+      label
+        | Name:
+      Ember.TextField value=name placeholder='name'
+    .ym-fbox
+      label
+        | Duration:
+      Ember.TextField type='number' value=seconds_remaining placeholder='duration(in seconds)'
+    .ym-fbox-footer
+      button{{action 'createGame'}} class="ym-button ym-primary" Create
+else
+  button{{action "openNewGameForm"}} class="ym-button ym-add" Create new game
