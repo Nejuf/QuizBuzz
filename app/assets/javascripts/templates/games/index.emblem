@@ -2,4 +2,5 @@
 ul
   each game in content
     unless game.isNew
-      li= game.name
+      li
+        link-to game.name 'game' game

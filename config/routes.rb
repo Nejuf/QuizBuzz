@@ -3,6 +3,6 @@ QuizBuzz::Application.routes.draw do
 
   devise_for :users
 
-  resources :users, only: [:index, :show]
-  resources :games, only: [:index, :create]
+  resources :users, only: [:index, :create, :show, :update, :destroy]
+  resources :games, only: [:index, :create, :show, :update, :destroy]
 end
