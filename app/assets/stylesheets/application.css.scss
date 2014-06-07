@@ -103,3 +103,8 @@ $center-form-width: 500px;
     margin-top: 12px;
   }
 }
+
+div.icon-user:before {
+   content: url("user_icon.png");
+}
+

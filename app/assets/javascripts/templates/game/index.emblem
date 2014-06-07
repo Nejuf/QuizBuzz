@@ -14,6 +14,7 @@
           .ym-grid
             each user in team.users
               .ym-g25.ym-gl
+                .icon-user
                 = user.email
             else
               | --No Members--
