@@ -15,6 +15,7 @@ $nav-blue: rgba(78, 78, 82, 0.39);
   }
 
   .logged-in-text {
+    @extend .secondary-text;
     padding-right: 1em;
   }
 
