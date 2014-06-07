@@ -1,16 +1,17 @@
 QuizBuzz
 ========
 
-QuizBuzz is an online buzzing system built with Ember, Rails, and Mongoid.  It enables academic/quiz bowl teams to practice or compete without a physical buzzer lockout system, like this:
+QuizBuzz is an online buzzing system built with Ember, Rails, and Mongoid.  It enables academic/quiz bowl teams to practice or compete without the need for a physical buzzer lockout system, like this:
 ![Buzzers](https://raw.githubusercontent.com/Nejuf/QuizBuzz/master/public/buzzers.jpg)
+
 Documentation
 -------------
 
-* Rails 3.2.13
-* Mongoid 3.1.16
-* Ember 1.5.1 (+Ember Data)
+* [Rails](http://rubyonrails.org/) 3.2.13
+* [Mongoid](http://mongoid.org/en/mongoid/index.html) 3.1.16
+* [Ember](http://emberjs.com/) 1.5.1 (+Ember Data)
 
-Templates and written in [Slim](http://slim-lang.com/) for Rails and [Emblem](http://emblemjs.com/) for Ember.
+Templates are written in [Slim](http://slim-lang.com/) for Rails and [Emblem](http://emblemjs.com/) for Ember.
 
 [CoffeeScript](http://coffeescript.org/) is used for JavaScript files and [EmberScript](http://emberscript.com/) for JavaScript files containing Ember code.
 
