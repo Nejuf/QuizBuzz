@@ -6,7 +6,6 @@
     |  Seconds Remaining
 
   div
-    h2 Teams
     .ym-grid
       each team in teams
         .ym-g50.ym-gl
@@ -21,6 +20,6 @@
               else
                 | --No Members--
       else
-        | --None--
+        | --No Teams--
 
   button{{action 'startGame'}} class="ym-button ym-xlarge ym-success" Start!

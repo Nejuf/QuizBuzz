@@ -3,18 +3,25 @@ $nav-blue: rgba(78, 78, 82, 0.39);
 .navbar {
   background-color: $nav-blue;
   padding-right: 1em;
-}
 
-.navbar-user {
-  float: right;
-  line-height: 3em; //To match YAML hlist
-}
+  .navbar-user {
+    float: right;
+    line-height: 3em; //To match YAML hlist
+  }
 
-.site-footer {
-  background-color: $nav-blue;
-  padding: 0.8em;
-}
+  .site-footer {
+    background-color: $nav-blue;
+    padding: 0.8em;
+  }
 
-.logged-in-text {
-  padding-right: 1em;
+  .logged-in-text {
+    padding-right: 1em;
+  }
+
+  .icon-quiz-buzz-buzzer {
+    float: left;
+    padding-left: 10px;
+    padding-top: 8px;
+  }
+
 }
