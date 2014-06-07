@@ -1,4 +1,4 @@
-
+h1.center Welcome to Quiz Buzz!
 .center.center-form
   render "game/new"
 .center

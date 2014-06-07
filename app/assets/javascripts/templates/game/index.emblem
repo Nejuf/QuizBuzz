@@ -10,14 +10,14 @@
     .ym-grid
       each team in teams
         .ym-g50.ym-gl
-          = team.name
-          .ym-grid
-            each user in team.users
-              .ym-g25.ym-gl
-                .icon-user
-                = user.email
-            else
-              | --No Members--
+          .game-team
+            .team-name= team.name
+            .ym-grid
+              each user in team.users
+                .ym-g25.ym-gl
+                  .icon-user
+              else
+                | --No Members--
       else
         | --None--
 
