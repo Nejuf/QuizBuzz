@@ -3,4 +3,4 @@ class QuizBuzz.Game extends DS.Model
   seconds_remaining: DS.attr('number')
 
   moderator: DS.belongsTo('user')
-  teams: DS.hasMany('teams')
+  teams: DS.hasMany('team')
