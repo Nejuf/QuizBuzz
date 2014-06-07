@@ -1,0 +1,16 @@
+.game-index {
+  .game-name {
+    font-size: 3em;
+  }
+  .game-mod {
+
+  }
+  .game-seconds-remaining {
+    font-size: 2em;
+    padding-bottom: 20px;
+
+    .seconds-remaining-number {
+      font-size: 2em;
+    }
+  }
+}

@@ -20,10 +20,16 @@
 
 // App
 @import "navbar";
+@import "game";
 
 $text-color: #ffffff;
+$text-secondary-color: #C0C0C0;
 $z-haze: 1;
 $z-main: 2;
+
+.secondary-text {
+  color: $text-secondary-color
+}
 
 body {
   background: url("gray_scratch_bg.jpg") top center;

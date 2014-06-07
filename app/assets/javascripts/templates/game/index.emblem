@@ -1,8 +1,8 @@
+.game-index
+  .game-name=name
+  .game-mod.secondary-text moderator: #{modName}
+  .game-seconds-remaining
+    span.seconds-remaining-number= seconds_remaining
+    |  Seconds Remaining
 
-div=name
-div
-  | moderator: #{modName}
-div
-  | #{seconds_remaining} Seconds Remaining
-
-button{{action 'startGame'}} class="ym-button ym-success" Start
+  button{{action 'startGame'}} class="ym-button ym-xlarge ym-success" Start
