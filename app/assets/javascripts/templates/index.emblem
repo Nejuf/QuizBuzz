@@ -1,4 +1,6 @@
-h1.center Welcome to Quiz Buzz!
+h1.text-center Welcome to
+.center
+  .icon-quiz-buzz-title
 .center.center-form
   render "game/new"
 .center
