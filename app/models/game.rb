@@ -7,4 +7,5 @@ class Game
   validates_presence_of :name
 
   belongs_to :moderator, class_name: 'User'
+  has_and_belongs_to_many :teams
 end

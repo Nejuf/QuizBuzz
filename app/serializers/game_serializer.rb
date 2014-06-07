@@ -3,4 +3,5 @@ class GameSerializer < ActiveModel::Serializer
 
   embed :ids, include: true
   has_one :moderator, root: :users
+  has_many :teams
 end
