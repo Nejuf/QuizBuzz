@@ -8,3 +8,5 @@ class QuizBuzz.IndexRoute extends Ember.Route
   setupController: (controller, models)->
     controller.set('users', models.users)
     controller.set('games', models.games)
+
+    @controllerFor('gameNew').set('showGameForm', false)
