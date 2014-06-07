@@ -28,7 +28,7 @@ $z-haze: 1;
 $z-main: 2;
 
 .secondary-text {
-  color: $text-secondary-color
+  color: $text-secondary-color;
 }
 
 body {
@@ -37,39 +37,40 @@ body {
 }
 
 body:before {
-  content: "";
-  position: absolute;
-  z-index: $z-haze;
-  top: 0;
-  right: 0;
-  left: 0;
-  height: 130px;
-  pointer-events: none;
   @include linear-gradient(top,rgba(0,0,0,0.7) 0%,rgba(0,0,0,0) 71%,rgba(0,0,0,0) 100%, $fallback: rgba(0,0,0,0));
+  content: "";
+  height: 130px;
+  left: 0;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: $z-haze;
 }
 
 body:after {
-  content: "";
-  position: absolute;
-  z-index: $z-haze;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  height: 400px;
-  pointer-events: none;
   @include linear-gradient(top,rgba(0,0,0,0) 11%,rgba(0,0,0,0.04) 15%,rgba(0,0,0,0.75) 100%, $fallback: rgba(0,0,0,0));
+  bottom: 0;
+  content: "";
+  height: 400px;
+  left: 0;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  z-index: $z-haze;
 }
 
 .site-header,
 .site-footer,
 .site-main {
-  z-index: $z-main;
   position: relative;
+  z-index: $z-main;
 }
 
 .site-header {
   min-height: 50px;
 }
+
 .site-main {
   min-height: 500px; //Dumbly push the footer down
 }
@@ -85,6 +86,7 @@ h6 {
 }
 
 $center-form-width: 500px;
+
 .center-form {
   max-width: $center-form-width;
 }
@@ -96,15 +98,17 @@ $center-form-width: 500px;
   .submit {
     float: inherit;
   }
+
   .remember-me-checkbox {
     margin-top: 10px;
   }
+
   .password-confirmation-input {
     margin-top: 12px;
   }
 }
 
 div.icon-user:before {
-   content: url("user_icon.png");
+  content: url("user_icon.png");
 }
 
