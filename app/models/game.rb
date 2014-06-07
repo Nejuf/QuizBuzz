@@ -5,4 +5,6 @@ class Game
   field :seconds_remaining, type: Integer
 
   validates_presence_of :name
+
+  belongs_to :moderator, class_name: 'User'
 end

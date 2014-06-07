@@ -1,6 +1,8 @@
 
 div=name
 div
+  | moderator: #{modName}
+div
   | #{seconds_remaining} Seconds Remaining
 
 button{{action 'startGame'}} class="ym-button ym-success" Start
