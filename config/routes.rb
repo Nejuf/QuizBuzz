@@ -3,6 +3,8 @@ QuizBuzz::Application.routes.draw do
 
   devise_for :users
 
-  resources :users, only: [:index, :create, :show, :update, :destroy]
-  resources :games, only: [:index, :create, :show, :update, :destroy]
+  #RESTful object routes
+  [:users, :games, :teams].each do |resource_name|
+    resources resource_name, only: [:index, :create, :show, :update, :destroy]
+  end
 end
