@@ -38,4 +38,6 @@ class User
   # field :locked_at,       type: Time
 
   has_many :games, as: :moderator
+
+  has_and_belongs_to_many :teams
 end
