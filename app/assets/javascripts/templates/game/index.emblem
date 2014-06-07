@@ -21,4 +21,4 @@
       else
         | --None--
 
-  button{{action 'startGame'}} class="ym-button ym-xlarge ym-success" Start
+  button{{action 'startGame'}} class="ym-button ym-xlarge ym-success" Start!

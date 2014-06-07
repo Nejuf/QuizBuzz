@@ -23,6 +23,7 @@ end
 gem 'active_model_serializers', '~> 0.8.1'
 
 gem 'bourbon', '~> 4.0.2'
+gem 'font-awesome-rails', '~> 4.1.0.0'
 
 gem 'jquery-rails'
 gem 'jquery-turbolinks'

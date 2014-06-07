@@ -1,5 +1,7 @@
 .center.center-form
   .ym-clearfix
-    a.ym-button.ym-xsmall.float-left href='/#/' Back
+    a.ym-button.ym-xsmall.float-left href='/#/'
+      i.fa.fa-angle-double-left.fa-fw
+      | Back
   div
     == outlet
