@@ -12,7 +12,7 @@ class ObjectController < ApplicationController
     set_model(object)
 
     if object.save
-      render json: object
+      render json: [object] # Always serialize as an array, in accordance with JSON API
     else
       render json: object.errors
     end
@@ -22,7 +22,7 @@ class ObjectController < ApplicationController
     object = model_class.find(params[:id])
     set_model(object)
 
-    render json: object
+    render json: [object] # Always serialize as an array, in accordance with JSON API
   end
 
   def update
@@ -30,7 +30,7 @@ class ObjectController < ApplicationController
     set_model(object)
 
     if object.update!(params[name_single])
-      render json: object
+      render json: [object] # Always serialize as an array, in accordance with JSON API
     else
       render json: object.errors
     end
@@ -41,9 +41,9 @@ class ObjectController < ApplicationController
     set_model(object)
 
     if object.destroy
-      render json: object
+      render json: [object] # Always serialize as an array, in accordance with JSON API
     else
-      render json: object, status: :unprocessable_entity
+      render json: [object], status: :unprocessable_entity
     end
   end
 
