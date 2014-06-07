@@ -12,12 +12,15 @@
 
 // Vendor
 @import "bourbon";
+@import "base/variables"; //Bourbon sass variables provided by Bitters used by Refills
+@import "refills/tooltip";
 @import "yaml/core/base";
 @import "yaml/screen/grid-960gs-12";
 @import "yaml/screen/typography";
 @import "yaml/navigation/hlist";
 @import "yaml/forms/gray-theme";
 @import "font-awesome";
+
 
 // App
 @import "navbar";
@@ -122,3 +125,4 @@ div.icon-quiz-buzz-title:before {
   display: block;
   text-align: center;
 }
+

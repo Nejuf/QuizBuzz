@@ -23,6 +23,9 @@ end
 gem 'active_model_serializers', '~> 0.8.1'
 
 gem 'bourbon', '~> 4.0.2'
+gem 'bitters', '~> 0.10.0' #Bourbon Bitters
+gem 'refills', '~> 0.0.2' #Bourbon Refills
+
 gem 'font-awesome-rails', '~> 4.1.0.0'
 
 gem 'jquery-rails'
