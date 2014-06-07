@@ -17,7 +17,8 @@ g1 = Game.create!({name: 'Game1', seconds_remaining: 10, moderator: mod})
 g2 = Game.create!({name: 'Game2', seconds_remaining: 100, moderator: mod})
 g3 = Game.create!({name: 'Game3', seconds_remaining: 1000, moderator: mod})
 
-t1 = Team.create!({name: 'Team1', users: [u2]})
-t2 = Team.create!({name: 'Team1', users: [u3, u4]})
+t1 = Team.create!({name: 'Team1', users: [u2], games: [g1, g2]})
+t2 = Team.create!({name: 'Team2', users: [u3, u4], games: [g1]})
+t3 = Team.create!({name: 'Team3', users: [u4], games: [g1]})
 
 puts "Seeding done."

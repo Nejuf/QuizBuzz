@@ -5,4 +5,19 @@
     span.seconds-remaining-number= seconds_remaining
     |  Seconds Remaining
 
+  div
+    h2 Teams
+    .ym-grid
+      each team in teams
+        .ym-g50.ym-gl
+          = team.name
+          .ym-grid
+            each user in team.users
+              .ym-g25.ym-gl
+                = user.email
+            else
+              | --No Members--
+      else
+        | --None--
+
   button{{action 'startGame'}} class="ym-button ym-xlarge ym-success" Start
