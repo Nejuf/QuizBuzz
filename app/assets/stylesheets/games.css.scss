@@ -1,0 +1,13 @@
+.unfinished-games {
+  display: inline-block;
+  width: 300px;
+
+  .game-row {
+    cursor: pointer;
+    cursor: hand;
+  }
+}
+
+.seconds-remaining-cell {
+  text-align: right;
+}

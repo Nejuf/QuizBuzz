@@ -1,7 +1,18 @@
-| Existing Games:
-div
-  each game in content
-    unless game.isNew
-      div
-        link-to-animated 'game' game animations="main:slideLeft"
-          = game.name
+.unfinished-games
+  div Your Unfinished Games
+  table
+    thead
+      tr
+        td Name
+        td
+          | Seconds
+          br
+          | Remaining
+    tbody
+      each game in content
+        unless game.isNew
+          render "game.row" game
+            td
+              = game.name
+            td.seconds-remaining-cell
+              = game.seconds_remaining
