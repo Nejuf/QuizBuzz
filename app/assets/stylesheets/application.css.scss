@@ -30,6 +30,9 @@ $z-main: 2;
 $fg-color: #F7FF16;
 $bg-color: #C38006;
 
+$font-readable: 'Carme', sans-serif;
+$font-stylized: 'Electrolize', $font-readable;
+
 // App
 @import "navbar";
 @import "devise";
@@ -43,6 +46,7 @@ $bg-color: #C38006;
 body {
   background: url("gray_scratch_bg.jpg") top center;
   color: $text-color;
+  font-family: $font-stylized;
   //Javascript is being used to keep the height of body in-sync with document
   position: relative; //Relative so haze and footer align to bottom with bottom: 0;
 }
@@ -95,7 +99,7 @@ h4,
 h5,
 h6 {
   color: $text-color;
-  font-family: Georgia, Serif;
+  font-family: $font-stylized;
 }
 
 $center-form-width: 500px;
