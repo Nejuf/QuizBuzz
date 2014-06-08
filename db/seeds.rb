@@ -12,13 +12,20 @@ mod = User.create!({email: 'user1@example.com', password: '12341234'})
 u2 = User.create!({email: 'user2@example.com', password: '12341234'})
 u3 = User.create!({email: 'user3@example.com', password: '12341234'})
 u4 = User.create!({email: 'user4@example.com', password: '12341234'})
+u5 = User.create!({email: 'user5@example.com', password: '12341234'})
+u6 = User.create!({email: 'user6@example.com', password: '12341234'})
 
-g1 = Game.create!({name: 'Game1', seconds_remaining: 10, moderator: mod})
-g2 = Game.create!({name: 'Game2', seconds_remaining: 100, moderator: mod})
-g3 = Game.create!({name: 'Game3', seconds_remaining: 1000, moderator: mod})
+g1 = Game.create!({name: 'Med-High vs. Sci-Tech', seconds_remaining: 10, moderator: mod})
+g2 = Game.create!({name: 'Penn State Tournament: Round 4', seconds_remaining: 100, moderator: mod})
+g3 = Game.create!({name: 'Exhibition', seconds_remaining: 1000, moderator: mod})
+g4 = Game.create!({name: 'Penn State Tournament: Round 3', seconds_remaining: 0, moderator: mod})
 
-t1 = Team.create!({name: 'Team1', users: [u2], games: [g1, g2]})
-t2 = Team.create!({name: 'Team2', users: [u3, u4], games: [g1]})
-t3 = Team.create!({name: 'Team3', users: [u4], games: [g1]})
+
+t1 = Team.create!({name: 'Med-High', users: [u2], games: [g1, g3]})
+t2 = Team.create!({name: 'Sci-Tech', users: [u3, u4], games: [g1]})
+t3 = Team.create!({name: 'Free Sign Up', users: [u4], games: [g3]})
+t4 = Team.create!({name: 'PSU', users: [u5], games: [g2, g4]})
+t5 = Team.create!({name: 'PS-Behrend', users: [u6], games: [g2]})
+t6 = Team.create!({name: 'UAT', users: [], games: [g4]})
 
 puts "Seeding done."
