@@ -20,7 +20,7 @@ if validEmberPath
     rootElement: '#ember-quiz-buzz'
 
     # Basic logging, e.g. "Transitioned into 'post'"
-    LOG_TRANSITIONS: true
+    # LOG_TRANSITIONS: true
 
     # Extremely detailed logging, highlighting every internal
     # step made while transitioning into a route, including
@@ -34,7 +34,7 @@ onDocHeightChanged = ()->
   docHeight = $(document).height()
   bodyHeight = $('body').height()
   if docHeight > bodyHeight
-    footerHeight = 44
+    footerHeight = 50
     # if the doc's height is greater than the body's height,
     # then a new element has been rendered or a height increased,
     # increase the body to account for that,
@@ -48,6 +48,8 @@ $(document).on 'ready.height-fix', ()->
     $(window).off('load.height-fix')
     onDocHeightChanged()
   $(window).resize ()->
+    onDocHeightChanged()
+  $(window).scroll ()->
     onDocHeightChanged()
 
 Ember.View.reopen

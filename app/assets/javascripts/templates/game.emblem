@@ -1,7 +1,7 @@
 .center.center-form
-  .ym-clearfix
-    link-to-animated "index" class="ym-button ym-xsmall float-left" animations="main:slideRight"
-      i.fa.fa-angle-double-left.fa-fw
-      | Back
   div
     == outlet
+  .ym-clearfix
+    link-to-animated "index" class="ym-button ym-xsmall back-button" animations="main:slideRight"
+      i.fa.fa-angle-double-left.fa-fw
+      | Back
