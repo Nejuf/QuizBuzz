@@ -5,6 +5,7 @@
 #= require ember
 #= require ember-data
 #= require ember-animate
+#= require ember-animated-outlet
 #= require_self
 #= require quiz_buzz
 

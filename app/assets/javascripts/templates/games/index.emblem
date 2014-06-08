@@ -3,4 +3,5 @@ div
   each game in content
     unless game.isNew
       div
-        link-to game.name 'game' game
+        link-to-animated 'game' game animations="main:slideLeft"
+          = game.name
