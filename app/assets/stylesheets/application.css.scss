@@ -38,6 +38,8 @@ $z-main: 2;
 body {
   background: url("gray_scratch_bg.jpg") top center;
   color: $text-color;
+  //Javascript is being used to keep the height of body in-sync with document
+  position: relative; //Relative so haze and footer align to bottom with bottom: 0;
 }
 
 body:before {
@@ -75,8 +77,10 @@ body:after {
   min-height: 50px;
 }
 
-.site-main {
-  min-height: 500px; //Dumbly push the footer down
+.site-footer {
+  bottom: 0;
+  position: absolute;
+  width: 100%;
 }
 
 h1,

@@ -23,14 +23,38 @@ window.QuizBuzz = Ember.Application.create(
   # LOG_TRANSITIONS_INTERNAL: true
   )
 
-# Basic animation for all of the views
+
+onDocHeightChanged = ()->
+  docHeight = $(document).height()
+  bodyHeight = $('body').height()
+  if docHeight > bodyHeight
+    footerHeight = 38
+    # if the doc's height is greater than the body's height,
+    # then a new element has been rendered or a height increased,
+    # increase the body to account for that,
+    # adding-in the height of the absolute positioned footer
+    $('body').height(docHeight + footerHeight)
+
+$(document).on 'ready.height-fix', ()->
+  $(document).off('ready.height-fix')
+  onDocHeightChanged()
+  $(window).on 'load.height-fix', ()->
+    $(window).off('load.height-fix')
+    onDocHeightChanged()
+  $(window).resize ()->
+    onDocHeightChanged()
+
 Ember.View.reopen
+  # Basic animation for all of the views
   willAnimateIn: ()->
     this.$().css("opacity", 0)
-
   animateIn: ()->
     this.$().fadeTo(500, 1)
-
   # Overriding the animateOut without doing view cleanup will result in old views sticking around
   # animateOut: ()->
   #   this.$().fadeTo(500, 0, done)
+
+  # An element was inserted, so update the body height because the doc height may have changed
+  didInsertElement: ()->
+    @_super()
+    Ember.run.scheduleOnce('afterRender', @, onDocHeightChanged)
