@@ -10,13 +10,13 @@ html
     header.site-header.ym-wrapper
       .ym-wbox
         nav.navbar.ym-hlist
-          a href="#"
+          a href="/#"
             .icon-quiz-buzz-buzzer
           ul
             li class="active"
               strong Active
             li
-              a href="#"Link
+              a href="/#"Link
           .navbar-user
             -if user_signed_in?
               span.logged-in-text
@@ -34,9 +34,10 @@ html
     section.site-main.ym-wrapper
       .ym-wbox
         / Devise Flash Messages
-        .center
-          p.notice= notice
-          p.alert= alert
+        -if notice.present? || alert.present?
+          .flash-container.center
+            p.notice= notice
+            p.alert= alert
 
         = yield
 
