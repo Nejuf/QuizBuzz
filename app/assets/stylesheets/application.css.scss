@@ -22,16 +22,19 @@
 @import "font-awesome";
 @import "ember-animated-outlet";
 
+$text-color: #ffffff;
+$text-secondary-color: #C0C0C0;
+$z-haze: 1;
+$z-main: 2;
+
+$fg-color: #F7FF16;
+$bg-color: #C38006;
+
 // App
 @import "navbar";
 @import "devise";
 @import "games";
 @import "game";
-
-$text-color: #ffffff;
-$text-secondary-color: #C0C0C0;
-$z-haze: 1;
-$z-main: 2;
 
 .secondary-text {
   color: $text-secondary-color;

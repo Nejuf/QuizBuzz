@@ -4,7 +4,51 @@
 
   .game-row {
     cursor: pointer;
-    cursor: hand;
+    cursor: hand; //Some browsers use hand instead of pointer
+  }
+
+  tbody tr:hover th,
+  tbody tr:hover td {
+    background: $bg-color;
+  }
+
+  table {
+    border: 0;
+    border-collapse: separate;
+    color: $fg-color;
+
+    $border-color: #000;
+
+    td {
+      border-top: 2px solid $border-color;
+    }
+
+    //Can't style border radius on tr, so we have to do it on the first and last td of the row
+    td:first-child {
+      @include border-left-radius(5px);
+      border-left: 1px solid $border-color;
+    }
+
+    td:last-child {
+      @include border-right-radius(5px);
+      border-right: 1px solid $border-color;
+    }
+
+    tbody {
+      // Last row of table needs bottom border
+      tr:last-of-type { //Ember's metamorph script tags prevent the row from being it's last child
+        td {
+          border-bottom: 1px solid $border-color;
+        }
+      }
+    }
+
+    .table-header tr td {
+      border-left: 0;
+      border-right: 0;
+      border: 0;
+      padding: 0;
+    }
   }
 }
 

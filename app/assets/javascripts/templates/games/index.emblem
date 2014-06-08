@@ -1,9 +1,11 @@
 .unfinished-games
-  div Your Unfinished Games
   table
-    thead
+    thead.table-header
       tr
-        td Name
+        td
+          | Unfinished
+          br
+          | Games
         td
           | Seconds
           br
