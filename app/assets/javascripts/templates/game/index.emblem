@@ -1,6 +1,7 @@
 .game-index
-  .game-name=name
-  .game-mod.secondary-text moderator: #{modName}
+  .heading
+    .game-name=name
+    .game-mod.secondary-text moderator: #{modName}
   .game-seconds-remaining
     span.seconds-remaining-number= seconds_remaining
     |  Seconds Remaining

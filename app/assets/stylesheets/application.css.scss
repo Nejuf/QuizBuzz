@@ -45,7 +45,7 @@ $font-stylized: 'Electrolize', $font-readable;
 
 body {
   background: url("gray_scratch_bg.jpg") top center;
-  color: $text-color;
+  color: $fg-color;
   font-family: $font-stylized;
   //Javascript is being used to keep the height of body in-sync with document
   position: relative; //Relative so haze and footer align to bottom with bottom: 0;

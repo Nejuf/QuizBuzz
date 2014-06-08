@@ -34,7 +34,7 @@ onDocHeightChanged = ()->
   docHeight = $(document).height()
   bodyHeight = $('body').height()
   if docHeight > bodyHeight
-    footerHeight = 38
+    footerHeight = 44
     # if the doc's height is greater than the body's height,
     # then a new element has been rendered or a height increased,
     # increase the body to account for that,

@@ -1,10 +1,14 @@
 .game-index {
+  .heading {
+    margin-bottom: 2em;
+  }
+
   .game-name {
-    font-size: 3em;
+    font-size: 3.4em;
   }
 
   .game-seconds-remaining {
-    font-size: 2em;
+    font-size: 1.8em;
     padding-bottom: 20px;
 
     .seconds-remaining-number {
