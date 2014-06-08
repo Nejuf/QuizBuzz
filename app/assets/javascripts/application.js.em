@@ -10,18 +10,24 @@
 #= require quiz_buzz
 
 # for more details see: http://emberjs.com/guides/application/
-window.QuizBuzz = Ember.Application.create(
-  rootElement: '#ember-quiz-buzz'
+emberPaths = ['/']
+validEmberPath = emberPaths.any (path)->
+  window.location.pathname == path || window.location.pathname[0..path.length+1] == path + '#'
 
-  # Basic logging, e.g. "Transitioned into 'post'"
-  LOG_TRANSITIONS: true
+window.QuizBuzz = {}
+if validEmberPath
+  window.QuizBuzz = Ember.Application.create(
+    rootElement: '#ember-quiz-buzz'
 
-  # Extremely detailed logging, highlighting every internal
-  # step made while transitioning into a route, including
-  # `beforeModel`, `model`, and `afterModel` hooks, and
-  # information about redirects and aborted transitions
-  # LOG_TRANSITIONS_INTERNAL: true
-  )
+    # Basic logging, e.g. "Transitioned into 'post'"
+    LOG_TRANSITIONS: true
+
+    # Extremely detailed logging, highlighting every internal
+    # step made while transitioning into a route, including
+    # `beforeModel`, `model`, and `afterModel` hooks, and
+    # information about redirects and aborted transitions
+    # LOG_TRANSITIONS_INTERNAL: true
+    )
 
 
 onDocHeightChanged = ()->
