@@ -13,7 +13,8 @@ class QuizBuzz.GameNewController extends Ember.ObjectController
         @model.save().then (game)=>
           @model = @store.createRecord('game')
           @showGameForm = false
-          @transitionToRoute('game', game)
+          # @transitionToRoute('game', game)
+          @transitionToRouteAnimated('game', {main: 'slideLeft'}, game)
 
       false
 

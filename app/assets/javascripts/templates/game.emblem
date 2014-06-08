@@ -1,6 +1,6 @@
 .center.center-form
   .ym-clearfix
-    a.ym-button.ym-xsmall.float-left href='/#/'
+    link-to-animated "index" class="ym-button ym-xsmall float-left" animations="main:slideRight"
       i.fa.fa-angle-double-left.fa-fw
       | Back
   div
