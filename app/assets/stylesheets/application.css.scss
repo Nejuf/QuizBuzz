@@ -18,7 +18,7 @@
 @import "yaml/screen/grid-960gs-12";
 @import "yaml/screen/typography";
 @import "yaml/navigation/hlist";
-@import "yaml/forms/gray-theme";
+@import "yaml/forms/quiz-buzz-theme";
 @import "font-awesome";
 @import "ember-animated-outlet";
 
@@ -27,8 +27,8 @@ $text-secondary-color: #C0C0C0;
 $z-haze: 1;
 $z-main: 2;
 
-$fg-color: #F7FF16;
-$bg-color: #C38006;
+$fg-color: #F7FF16; //yellow
+$bg-color: #C38006; //orange
 
 $font-readable: 'Carme', sans-serif;
 $font-stylized: 'Electrolize', $font-readable;
@@ -98,7 +98,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: $text-color;
+  color: $fg-color;
   font-family: $font-stylized;
 }
 
