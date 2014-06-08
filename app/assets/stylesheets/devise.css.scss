@@ -1,0 +1,34 @@
+.sign-in,
+.sign-up,
+.edit-registration,
+.new-password {
+  @extend .center-form;
+
+  .submit {
+    float: inherit;
+  }
+
+  .remember-me-checkbox {
+    margin-top: 10px;
+  }
+
+  .password-confirmation-input {
+    margin-top: 12px;
+  }
+
+  .current-password-label {
+    margin-top: 32px;
+  }
+}
+
+.edit-registration {
+  .password-label {
+    margin-top: 12px;
+  }
+}
+
+.new-password {
+  .email-label {
+    margin-top: 15px;
+  }
+}

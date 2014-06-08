@@ -24,6 +24,7 @@
 
 // App
 @import "navbar";
+@import "devise";
 @import "game";
 
 $text-color: #ffffff;
@@ -97,23 +98,6 @@ $center-form-width: 500px;
 
 .center-form {
   max-width: $center-form-width;
-}
-
-.sign-in,
-.sign-up {
-  @extend .center-form;
-
-  .submit {
-    float: inherit;
-  }
-
-  .remember-me-checkbox {
-    margin-top: 10px;
-  }
-
-  .password-confirmation-input {
-    margin-top: 12px;
-  }
 }
 
 div.icon-user:before {
