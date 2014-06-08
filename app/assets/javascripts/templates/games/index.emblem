@@ -11,7 +11,7 @@
           br
           | Remaining
     tbody
-      each game in content
+      each game in unfinishedGames
         unless game.isNew
           render "game.row" game
             td
