@@ -23,4 +23,12 @@
   .team-name {
     font-size: 2em;
   }
+
+  hr {
+    @include linear-gradient(left,rgba(0,0,0,0),rgba(247, 255, 22, .75),rgba(0,0,0,0));
+    border: 0;
+    border-color: $fg-color;
+    height: 1px;
+    padding: 0;
+  }
 }
