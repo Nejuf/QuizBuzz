@@ -20,3 +20,7 @@
 /.elasticbeanstalk/
 .elasticbeanstalk/ #beanstalk keeps adding it in
 
+
+
+# Ignore application configuration
+/config/application.yml
