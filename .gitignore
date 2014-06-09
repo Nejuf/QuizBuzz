@@ -16,3 +16,6 @@
 
 # Ignore lock files
 /*.lock
+
+/.elasticbeanstalk/
+
