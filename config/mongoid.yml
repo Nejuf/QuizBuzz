@@ -84,6 +84,6 @@ production:
     default:
       database: quiz_buzz_production
       hosts:
-        - 54.183.93.188:27017
+        - localhost:27017
       options:
         use_utc: true
