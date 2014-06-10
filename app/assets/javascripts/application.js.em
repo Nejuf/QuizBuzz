@@ -55,12 +55,12 @@ $(document).on 'ready.height-fix', ()->
 Ember.View.reopen
   # Basic animation for all of the views
   willAnimateIn: ()->
-    this.$().css("opacity", 0)
+    @$()?.css("opacity", 0)
   animateIn: ()->
-    this.$().fadeTo(500, 1)
+    @$()?.fadeTo(500, 1)
   # Overriding the animateOut without doing view cleanup will result in old views sticking around
   # animateOut: ()->
-  #   this.$().fadeTo(500, 0, done)
+  #   @$()?.fadeTo(500, 0, done)
 
   # An element was inserted, so update the body height because the doc height may have changed
   didInsertElement: ()->
