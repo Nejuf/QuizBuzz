@@ -40,6 +40,8 @@ gem 'bson_ext', '~> 1.10.1'
 gem 'mongoid', '~> 3.1.6'
 gem 'mongoid_rails_migrations', '~> 1.0.1'
 
+gem 'minitest', '4.3.2' # Required by active support and is included with later versions of Ruby, but not with current the AWS configuration
+
 gem 'ember-rails', '~> 0.15.0'
 gem 'ember-source', '~> 1.5.1.1'
 gem 'emblem-rails', '~> 0.2.1'
