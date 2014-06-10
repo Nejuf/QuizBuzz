@@ -1,13 +1,13 @@
 .tooltip-item {
-  $tooltip-background: transparentize($dark-gray, 0.1);
+  $tooltip-background: rgba(100, 79, 79, 0.95);
   $tooltip-color: white;
   $tooltip-width: 10em;
 
   // border: 1px solid $base-border-color;
-  padding: .5em 1em;
-  border-radius: $base-border-radius;
+  // padding: .5em 1em;
+  border-radius: 0.6em;
   position: relative;
-  margin-bottom: $base-line-height;
+  // margin-bottom: $base-line-height;
 
   &:hover .tooltip {
     opacity: 1;
