@@ -47,6 +47,8 @@ gem 'ember-source', '~> 1.5.1.1'
 gem 'emblem-rails', '~> 0.2.1'
 gem 'emblem-source', '~> 0.3.15'
 
+gem 'pusher', '~> 0.12.0'
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
