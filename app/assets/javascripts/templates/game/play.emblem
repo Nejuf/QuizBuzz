@@ -1,0 +1,19 @@
+| Play Game!
+
+.game-team-list
+  .ym-grid
+    each team in teams
+      .ym-g50.ym-gl
+        .game-team
+          .team-name= team.name
+          hr
+          .ym-grid
+            each user in team.users
+              .ym-g25.ym-gl
+                .tooltip-item.icon-user
+                  .tooltip
+                    p = user.email
+            else
+              | --No Members--
+    else
+      | --No Teams--

@@ -6,7 +6,7 @@
     span.seconds-remaining-number= seconds_remaining
     |  Seconds Remaining
 
-  div
+  .game-team-list
     .ym-grid
       each team in teams
         .ym-g50.ym-gl
@@ -19,6 +19,7 @@
                   .tooltip-item.icon-user
                     .tooltip
                       p = user.email
+                      p ready!
               else
                 | --No Members--
       else
