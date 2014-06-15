@@ -8,4 +8,7 @@ QuizBuzz::Application.routes.draw do
   [:users, :games, :teams].each do |resource_name|
     resources resource_name, only: [:index, :create, :show, :update, :destroy]
   end
+
+  # Pusher user authentication
+  post '/pusher_auth', to: 'pusher#auth'
 end
