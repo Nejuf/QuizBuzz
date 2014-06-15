@@ -1,13 +1,18 @@
 class PusherController < ApplicationController
   protect_from_forgery except: ['auth']
+   before_filter :authenticate_user!, except: :auth
 
   def auth
-    response = Pusher[params[:channel_name]].authenticate(params[:socket_id], {
-      user_id: current_or_guest_user.id, # required
-      user_info: {
-        email: current_or_guest_user.email
-      }
-    })
-    render json: response
+    if current_user
+      response = Pusher[params[:channel_name]].authenticate(params[:socket_id], {
+        user_id: current_user.id, # required
+        user_info: {
+          email: current_user.email
+        }
+      })
+      render json: response
+    else
+      render json: {error: 'Unauthorized'}, :status => '403'
+    end
   end
 end

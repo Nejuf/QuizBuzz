@@ -72,7 +72,7 @@ Pusher.log = (message)->
   if window.console?.log
     window.console.log(message)
 
-QuizBuzz.pusher = pusher = new Pusher('0d31bef64e41b775cef9', authEndpoint: '/pusher_auth.json')
+QuizBuzz.pusher = pusher = new Pusher('0d31bef64e41b775cef9', authEndpoint: '/pusher_auth')
 QuizBuzz.channel = channel = pusher.subscribe('presence-test_channel') # A presence channel so clients can communicate directly and know who is online
 # channel.bind 'client-my_event', (data)->
 #   alert(data.message)
