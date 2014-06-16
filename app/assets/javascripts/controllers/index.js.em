@@ -1,2 +1,2 @@
-class QuizBuzz.IndexController extends Ember.Controller
+class QuizBuzz.IndexController extends QuizBuzz.BaseController
 

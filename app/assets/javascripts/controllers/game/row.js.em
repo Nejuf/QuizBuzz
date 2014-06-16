@@ -1,4 +1,4 @@
-class QuizBuzz.GameRowController extends Ember.ObjectController
+class QuizBuzz.GameRowController extends QuizBuzz.BaseObjectController
   actions:
     onRowClicked: ()->
       @transitionToRouteAnimated('game', {main: 'slideLeft'}, @model)

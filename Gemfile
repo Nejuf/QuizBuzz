@@ -32,6 +32,8 @@ gem 'font-awesome-rails', '~> 4.1.0.0'
 
 gem 'jquery-rails'
 gem 'jquery-turbolinks'
+gem 'jquery-cookie-rails'
+
 gem 'slim-rails'
 
 gem 'devise', '~> 3.2.4'

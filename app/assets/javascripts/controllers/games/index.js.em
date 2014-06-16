@@ -1,4 +1,4 @@
-class QuizBuzz.GamesIndexController extends Ember.ArrayController
+class QuizBuzz.GamesIndexController extends QuizBuzz.BaseArrayController
   +computed content.@each.seconds_remaining
   unfinishedGames: ->
     @content.filter (game)->

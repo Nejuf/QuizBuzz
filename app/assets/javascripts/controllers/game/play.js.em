@@ -1,2 +1,2 @@
-class QuizBuzz.GamePlayController extends Ember.ObjectController
+class QuizBuzz.GamePlayController extends QuizBuzz.BaseObjectController
 

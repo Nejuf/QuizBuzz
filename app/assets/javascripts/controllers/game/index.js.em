@@ -1,4 +1,4 @@
-class QuizBuzz.GameIndexController extends Ember.ObjectController
+class QuizBuzz.GameIndexController extends QuizBuzz.BaseObjectController
   +computed moderator.email
   modName: ->
     @get('moderator.email') || "--"

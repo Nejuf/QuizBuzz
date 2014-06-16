@@ -1,5 +1,6 @@
 #= require jquery
 #= require jquery_ujs
+#= require jquery.cookie
 #
 #= require handlebars
 #= require ember
@@ -16,6 +17,18 @@ validEmberPath = emberPaths.any (path)->
 
 window.QuizBuzz = {}
 if validEmberPath
+
+  Ember.Application.initializer(
+    name: 'currentUser'
+    after: 'store'
+
+    initialize: (container)->
+      store = container.lookup('store:main')
+      store.find('user', $.cookie('current_user_id')).then (user)->
+        appController = container.lookup('controller:application')
+        appController.set('currentUser', user)
+  )
+
   window.QuizBuzz = Ember.Application.create(
     rootElement: '#ember-quiz-buzz'
 

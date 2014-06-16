@@ -1,4 +1,4 @@
-class QuizBuzz.GameNewController extends Ember.ObjectController
+class QuizBuzz.GameNewController extends QuizBuzz.BaseObjectController
 
   showGameForm: false
 
