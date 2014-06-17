@@ -1,4 +1,5 @@
-class QuizBuzz.GameIndexController extends QuizBuzz.BaseObjectController
+class QuizBuzz.GameIndexController extends QuizBuzz.BaseObjectController with QuizBuzz.ChannelableMixin
+
   +computed moderator.email
   modName: ->
     @get('moderator.email') || "--"

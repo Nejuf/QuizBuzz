@@ -7,6 +7,7 @@ class PusherController < ApplicationController
       response = Pusher[params[:channel_name]].authenticate(params[:socket_id], {
         user_id: current_user.id, # required
         user_info: {
+          id: current_user.id.to_s,
           email: current_user.email
         }
       })

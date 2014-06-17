@@ -1,2 +1,2 @@
-class QuizBuzz.GamePlayController extends QuizBuzz.BaseObjectController
+class QuizBuzz.GamePlayController extends QuizBuzz.BaseObjectController with QuizBuzz.ChannelableMixin
 
