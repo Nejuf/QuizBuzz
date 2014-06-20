@@ -5,6 +5,12 @@ html
       | QuizBuzz
     link href='http://fonts.googleapis.com/css?family=Carme|Electrolize' rel='stylesheet' type='text/css'
     = stylesheet_link_tag    "application", :media => "all"
+    javascript:
+      window.Rails = window.Rails || {}
+      window.Rails.env = "#{Rails.env}"
+      window.Rails.isDevelopment = window.Rails.env === 'development'
+      window.Rails.isProduction = window.Rails.env === 'production'
+
     = javascript_include_tag "application"
     = csrf_meta_tags
   body
