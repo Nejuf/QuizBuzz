@@ -22,4 +22,5 @@
       else
         | --No Teams--
 
+  .players-ready Players ready: #{playersReadyCount} / #{playersTotal}
   button{{action 'startGame'}} class="ym-button ym-xlarge ym-success" Start!
