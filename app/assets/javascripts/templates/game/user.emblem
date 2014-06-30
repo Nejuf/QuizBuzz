@@ -1,8 +1,8 @@
 if view.useIcon
   .tooltip-item.icon-user
     .tooltip
-      p = user.email
+      p = model.email
       p = userReadyText
 else
-  p = user.email
+  p = model.email
   p = userReadyText

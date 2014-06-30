@@ -23,4 +23,9 @@
         | --No Teams--
 
   .players-ready Players ready: #{playersReadyCount} / #{playersTotal}
-  button{{action 'startGame'}} class="ym-button ym-xlarge ym-success" Start!
+
+  if currentUserIsMod
+    button{{action 'startGame'}} class="ym-button ym-xlarge ym-success" Start!
+  else
+    .mod-start-message Only the moderator can start this game
+    render 'game.user' moderator useIcon=true

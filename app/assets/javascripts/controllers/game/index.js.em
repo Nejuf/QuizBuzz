@@ -15,6 +15,10 @@ class QuizBuzz.GameIndexController extends QuizBuzz.BaseObjectController with Qu
       total += team.get('users.length')
     total
 
+  +computed currentUser, model.moderator
+  currentUserIsMod: ->
+    @currentUser == @model.moderator
+
   actions:
     startGame: ()->
       alert('Sorry, this feature is not yet implemented!\nFollow progress at https://github.com/Nejuf/QuizBuzz')
