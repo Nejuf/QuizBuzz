@@ -4,9 +4,15 @@ class QuizBuzz.GameIndexController extends QuizBuzz.BaseObjectController with Qu
   modName: ->
     @get('moderator.email') || "--"
 
-  +computed members.length
+  +computed members.@each
+  playersReady: ->
+    mod = @model.moderator
+    @members.filter (user)->
+      return user != mod
+
+  +computed playersReady.length
   playersReadyCount: ->
-    @members.length
+    @playersReady.length
 
   +computed model.teams.@each.users.length
   playersTotal: ->
