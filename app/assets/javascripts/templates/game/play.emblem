@@ -1,19 +1,29 @@
 | Play Game!
 
-.game-team-list
-  .ym-grid
-    each team in teams
-      .ym-g50.ym-gl
-        .game-team
-          .team-name= team.name
-          hr
-          .ym-grid
-            each user in team.users
-              .ym-g25.ym-gl
-                .tooltip-item.icon-user
-                  .tooltip
-                    p = user.email
-            else
-              | --No Members--
-    else
-      | --No Teams--
+if showScores
+  .game-team-list
+    .ym-grid
+      each team in teams
+        .ym-g50.ym-gl
+          .game-team
+            .team-name= team.name
+            hr
+            .ym-grid
+              each user in team.users
+                .ym-g25.ym-gl
+                  .tooltip-item.icon-user
+                    .tooltip
+                      p = user.email
+              else
+                | --No Members--
+      else
+        | --No Teams--
+else
+  div #{questionNumText}
+  div #{questionTimeText}
+  if currentUserIsMod
+    button{{action 'answerCorrect'}} class="ym-button ym-xlarge ym-success" Correct
+    button{{action 'answerWrong'}} class="ym-button ym-xlarge ym-danger" Wrong
+    button{{action 'togglePause'}} class="ym-button ym-xlarge ym-warning" Pause
+  else
+    button{{action 'buzz'}} class="ym-button ym-xlarge ym-success" Buzz!
